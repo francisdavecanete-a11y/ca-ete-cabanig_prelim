@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AniTrack — Season Tracker for Davao Oriental Farms</title>
+  <meta name="description" content="AniTrack helps smallholder farmers in Davao Oriental track crops, costs, and season profit in one place." />
+  <meta name="theme-color" content="#10381f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310381f'/%3E%3Cpath d='M16 26V15' stroke='%23b9dd8f' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M16 18c-6 0-9-3.4-9-9 5.4 0 9 3 9 9Z' fill='%23b9dd8f'/%3E%3Cpath d='M16 14c0-5 3-8.4 8.4-8.4 0 5.4-3.2 8.4-8.4 8.4Z' fill='%23d9a441'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#" aria-label="AniTrack home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M16 27V14.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            <path d="M16 19c-6.2 0-9.2-3.5-9.2-9.2 5.6 0 9.2 3.1 9.2 9.2Z" fill="currentColor" />
+            <path d="M16 14.4c0-5.2 3.1-8.7 8.7-8.7 0 5.6-3.3 8.7-8.7 8.7Z" fill="var(--gold-300)" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>AniTrack</strong>
+          <small>Davao Oriental</small>
+        </span>
+      </a>
+
+      <nav class="topbar__nav" aria-label="Page sections">
+        <a href="#crops">Crops</a>
+        <a href="#finance">Finance</a>
+        <a href="#summary">Season summary</a>
+      </nav>
+
+      <span class="topbar__badge"> · 2026</span>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__inner">
+      <p class="eyebrow">Farm records, simplified</p>
+      <h1 id="hero-title">Track every season.<br /><em>Grow every harvest.</em></h1>
+      <p class="hero__lede">
+        AniTrack keeps a small farm's crops, costs, and profit in one calm dashboard —
+        built for growers in Davao Oriental, where every hectare counts.
+      </p>
+      <ul class="hero__chips" aria-label="What AniTrack does">
+        <li>Crop records</li>
+        <li>Cost &amp; income log</li>
+        <li>Season profit</li>
+      </ul>
+    </div>
+  </section>
+
+  <main id="main" class="dashboard">
+    <section id="crops" class="panel panel--crops" aria-labelledby="crops-title">
+      <div class="panel__head">
+        <div>
+          <p class="panel__kicker">01 · Records</p>
+          <h2 id="crops-title">Your crops</h2>
+        </div>
+        <p class="panel__hint">Add, edit, or remove a crop and its figures follow.</p>
+      </div>
+      <div class="view-crop-list"></div>
+    </section>
+
+    <section class="panel panel--form" aria-labelledby="crop-form-title">
+      <div class="panel__head">
+        <div>
+          <p class="panel__kicker">02 · New record</p>
+          <h2 id="crop-form-title">Crop details</h2>
+        </div>
+      </div>
+      <div class="view-crop-form"></div>
+    </section>
+
+    <section id="summary" class="panel panel--summary" aria-labelledby="summary-title">
+      <div class="panel__head">
+        <div>
+          <p class="panel__kicker">04 · Overview</p>
+          <h2 id="summary-title">Season summary</h2>
+        </div>
+        <p class="panel__hint">Filter by season to see how each planting cycle is doing.</p>
+      </div>
+      <div class="view-summary"></div>
+    </section>
+    <section id="finance" class="panel panel--finance" aria-labelledby="finance-title">
+      <div class="panel__head">
+        <div>
+          <p class="panel__kicker">03 · Money</p>
+          <h2 id="finance-title">Expenses &amp; harvest income</h2>
+        </div>
+        <p class="panel__hint">Every entry updates the crop and season totals.</p>
+      </div>
+      <div class="view-finance"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p><strong>AniTrack</strong> — ITPFE 1 Prelim Project · Cañete &amp; Cabanig</p>
+      <p class="footer__muted"></p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/controller.js"></script>
+</body>
+</html>
